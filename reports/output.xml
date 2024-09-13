@@ -1,63 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.3 on win32)" generated="2024-09-12T01:44:36.632784" rpa="false" schemaversion="5">
-<suite id="s1" name="Login Test" source="C:\Users\soma\PycharmProjects\pythonProject\tests\login_test.robot">
-<test id="s1-t1" name="User Should Be Able To Login Successfully" line="11">
+<robot generator="Robot 7.1 (Python 3.12.3 on win32)" generated="2024-09-14T00:30:23.937501" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="C:\Users\soma\PycharmProjects\Robot-Framework-Python-Project\tests\login_test.robot">
+<test id="s1-t1" name="User Should Be Able To Login Successfully" line="12">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-09-12T01:44:36.960897" level="INFO">Opening browser 'chrome' to base url 'https://accounts.google.com/'.</msg>
+<msg time="2024-09-14T00:30:24.663063" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
+<msg time="2024-09-14T00:30:24.664422" level="INFO">Opening browser 'chrome' to base url 'https://accounts.google.com/'.</msg>
 <arg>${LOGIN_URL}</arg>
 <arg>${BROWSER}</arg>
+<arg>executable_path=${CHROMEDRIVER_PATH}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-09-12T01:44:36.960897" elapsed="4.244719"/>
+<status status="PASS" start="2024-09-14T00:30:24.663063" elapsed="5.783206"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-09-12T01:44:41.205616" elapsed="0.046972"/>
+<status status="PASS" start="2024-09-14T00:30:30.446269" elapsed="0.068956"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:identifierId</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-14T00:30:30.515225" elapsed="0.042000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-09-12T01:44:41.252588" level="INFO">Typing text 'abhijit.som82@gmail.com' into text field 'id:identifierId'.</msg>
+<msg time="2024-09-14T00:30:30.558226" level="INFO">Typing text 'abhijit.som82@gmail.com' into text field 'id:identifierId'.</msg>
 <arg>id:identifierId</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-09-12T01:44:41.252588" elapsed="0.188068"/>
+<status status="PASS" start="2024-09-14T00:30:30.558226" elapsed="0.216009"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-09-12T01:45:11.697022" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-09-12T01:45:11.697022" level="FAIL">Element 'id:password' not visible after 30 seconds.</msg>
+<msg time="2024-09-14T00:31:01.046314" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-09-14T00:31:01.046314" level="FAIL">Element 'id:password' not visible after 30 seconds.</msg>
 <arg>id:password</arg>
 <arg>30</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-09-12T01:44:41.440656" elapsed="30.256366">Element 'id:password' not visible after 30 seconds.</status>
+<status status="FAIL" start="2024-09-14T00:30:30.774235" elapsed="30.279412">Element 'id:password' not visible after 30 seconds.</status>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
 <arg>id:password</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-09-12T01:45:11.697022" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-09-14T00:31:01.054656" elapsed="0.000000"/>
 </kw>
 <kw name="Click Button" owner="SeleniumLibrary">
 <arg>xpath://button[@type='submit']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-09-12T01:45:11.697022" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-09-14T00:31:01.054656" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>xpath://h1[contains(text(), 'Dashboard')]</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-09-12T01:45:11.697022" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-09-14T00:31:01.054656" elapsed="0.000000"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
 <arg>xpath://h1[contains(text(), 'Dashboard')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-09-12T01:45:11.697022" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-09-14T00:31:01.055498" elapsed="0.000000"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2024-09-12T01:45:11.697022" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-09-14T00:31:01.055498" elapsed="0.000000"/>
 </kw>
 <doc>Test to verify successful login</doc>
-<status status="FAIL" start="2024-09-12T01:44:36.960897" elapsed="34.736125">Element 'id:password' not visible after 30 seconds.</status>
+<status status="FAIL" start="2024-09-14T00:30:24.663063" elapsed="36.392435">Element 'id:password' not visible after 30 seconds.</status>
 </test>
-<status status="FAIL" start="2024-09-12T01:44:36.632784" elapsed="35.072133"/>
+<status status="FAIL" start="2024-09-14T00:30:23.939929" elapsed="37.116657"/>
 </suite>
 <statistics>
 <total>
@@ -70,5 +78,6 @@
 </suite>
 </statistics>
 <errors>
+<msg time="2024-09-14T00:30:24.663063" level="WARN">exexcutable_path is being deprecated. Please use service to configure the driver's executable_path as per documentation.</msg>
 </errors>
 </robot>
